@@ -15,7 +15,7 @@ function Index() {
                 {
                     state.data.map((valor) => {
                         return (
-                            <Route exact path={`/questions/video-${valor.id}`} component={Question} />
+                            <Route key={valor.id} exact path={`/questions/video-${valor.id}`} component={Question} />
                         )
                     })
                 }

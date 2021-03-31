@@ -3,14 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles/Question.css'
-import state from '../data.json';
 
 
 
 
 class Question extends React.Component {
-    
+
     componentDidMount() {
+
         let mediaRecorder;
         let recordedBlobs;
 
@@ -30,6 +30,7 @@ class Question extends React.Component {
         });
 
         const playButton = document.querySelector('button#play');
+
         playButton.addEventListener('click', () => {
             const superBuffer = new Blob(recordedBlobs, { type: 'video/webm' });
             recordedVideo.src = null;
@@ -137,7 +138,7 @@ class Question extends React.Component {
             await init(constraints);
         });
     }
-    
+
     render() {
 
         return (
@@ -152,7 +153,9 @@ class Question extends React.Component {
                     <button id="download" disabled>Download</button>
                 </div>
                 <div>
-                    <h4>Media Stream Constraints options</h4>
+
+                    <h4>{this.props.quest}</h4>
+
                     <p>Echo cancellation: <input type="checkbox" id="echoCancellation" /></p>
                     <Link to="/questions" className="">
                         Regresar

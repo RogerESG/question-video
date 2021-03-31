@@ -19,7 +19,7 @@ class VideoList extends React.Component {
                             <div className="bot">
                                 <div><strong>{dato.question}</strong></div>
                                 <div className="question">
-                                    <Link to={`questions/video-${dato.id}`} className="">
+                                    <Link to={`questions/video-${dato.id}`} quest={dato.question}>
                                         Responder
                                     </Link>
                                 </div>

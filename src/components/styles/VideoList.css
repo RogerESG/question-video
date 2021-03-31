@@ -1,0 +1,32 @@
+.videosList li {
+    margin-bottom: 1rem;
+  }
+  
+  .videosListItem {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .question {
+    color: #1da1f2;
+    
+  }
+
+.top { grid-area: top; }
+.bot { grid-area: bot; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'top'
+    'bot';
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.grid-container > div {
+    text-align: center;
+}
